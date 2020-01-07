@@ -16,32 +16,25 @@ A = []
 L = []
 C = []
 P = []
-n = 4
+T = []
+n = 15
 
 for i in range(0,n):
     row = []
     lrow = []
+    trow = []
     for j in range(0,n):
         row.append(float(randrange(9)+1))
+        trow.append(0)
         if i == j:
             lrow.append(float(1))
         else:
             lrow.append(float(0))
     A.append(row)
     L.append(lrow)
+    T.append(trow)
     P.append(i)
 P.append(n)
-
-'''A = []
-A.append([2,1,5])
-A.append([4,4,-4])
-A.append([1,3,1])'''
-
-'''A = []
-A.append([2,5,9,3])
-A.append([9,9,7,9])
-A.append([1,4,8,9])
-A.append([6,9,3,6])'''
 
 print("A:\n")
 printMatrix(A)
@@ -89,10 +82,8 @@ for i in range(0,n):
             s+=(L[i][k]*A[k][j])
         row.append(s)
     C.append(row)
-'''for i in range(0,n):
-    if(P[i] != i):
-        for j in range(0,n):
-            t = C[P[i]][j]
-            C[P[i]][j] = C[i][j]
-            C[i][j] = t'''
+for i in range(0,n):
+    for j in range(0,n):
+        T[P[i]][j] = C[i][j]
+C = T
 printMatrix(C)
