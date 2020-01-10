@@ -17,7 +17,7 @@ L = []
 C = []
 P = []
 T = []
-n = 15
+n = 4
 
 for i in range(0,n):
     row = []
