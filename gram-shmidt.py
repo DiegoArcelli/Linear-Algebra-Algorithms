@@ -5,7 +5,6 @@ import math
 # transforms a matrix A in an ortogonal matrix Q using gram-shmidt algorithm
 # the best part is that it's so numerically unstable that basically it always
 # gives a Q matrix that is useless for anything
-# (unless you're lucky enough to get only perfect squares)
 
 
 def printMatrix(A):
